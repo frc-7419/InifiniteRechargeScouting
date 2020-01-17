@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A5ACCD7224A21C7008109E7 /* ReViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5ACCD6224A21C7008109E7 /* ReViewController.swift */; };
+		AACB9D8C2217B19100B7E84B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB9D8B2217B19100B7E84B /* AppDelegate.swift */; };
+		AACB9D8E2217B19100B7E84B /* TeamPickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB9D8D2217B19100B7E84B /* TeamPickerTableViewController.swift */; };
+		AACB9D912217B19100B7E84B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACB9D8F2217B19100B7E84B /* Main.storyboard */; };
+		AACB9D932217B19100B7E84B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AACB9D922217B19100B7E84B /* Assets.xcassets */; };
+		AACB9D962217B19100B7E84B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACB9D942217B19100B7E84B /* LaunchScreen.storyboard */; };
+		AACB9D9E2217B29400B7E84B /* SandstormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB9D9D2217B29400B7E84B /* SandstormTableViewController.swift */; };
+		AACB9DA22217B2E000B7E84B /* TotalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB9DA12217B2E000B7E84B /* TotalTableViewController.swift */; };
+		B43C97692235D365001F3AC8 /* ModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C97682235D365001F3AC8 /* ModelObject.swift */; };
+		B463ECD82399E8B000E81A16 /* SAPOData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B463ECD42399E8AF00E81A16 /* SAPOData.framework */; };
+		B463ECD92399E8B000E81A16 /* SAPCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B463ECD52399E8B000E81A16 /* SAPCommon.framework */; };
+		B463ECDA2399E8B000E81A16 /* SAPFiori.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B463ECD62399E8B000E81A16 /* SAPFiori.framework */; };
+		B463ECDB2399E8B000E81A16 /* SAPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B463ECD72399E8B000E81A16 /* SAPFoundation.framework */; };
+		B463ECDC2399E8BD00E81A16 /* SAPCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B463ECD52399E8B000E81A16 /* SAPCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B463ECDD2399E8BD00E81A16 /* SAPFiori.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B463ECD62399E8B000E81A16 /* SAPFiori.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B463ECDE2399E8BD00E81A16 /* SAPFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B463ECD72399E8B000E81A16 /* SAPFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B463ECDF2399E8BD00E81A16 /* SAPOData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B463ECD42399E8AF00E81A16 /* SAPOData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B49960252399E94A00AE703F /* AutonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49960242399E94A00AE703F /* AutonTableViewController.swift */; };
+		F6157A832235E028001033E1 /* TeleOpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6157A812235E028001033E1 /* TeleOpViewController.swift */; };
+		F6157A842235E028001033E1 /* TeleOp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6157A822235E028001033E1 /* TeleOp.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F6A04937223EC4140036B116 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B463ECDC2399E8BD00E81A16 /* SAPCommon.framework in Embed Frameworks */,
+				B463ECDD2399E8BD00E81A16 /* SAPFiori.framework in Embed Frameworks */,
+				B463ECDE2399E8BD00E81A16 /* SAPFoundation.framework in Embed Frameworks */,
+				B463ECDF2399E8BD00E81A16 /* SAPOData.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2A5ACCD6224A21C7008109E7 /* ReViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReViewController.swift; sourceTree = "<group>"; };
+		AACB9D882217B19100B7E84B /* InfiniteRechargeScouting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteRechargeScouting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AACB9D8B2217B19100B7E84B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AACB9D8D2217B19100B7E84B /* TeamPickerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPickerTableViewController.swift; sourceTree = "<group>"; };
+		AACB9D902217B19100B7E84B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AACB9D922217B19100B7E84B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AACB9D952217B19100B7E84B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AACB9D972217B19100B7E84B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AACB9D9D2217B29400B7E84B /* SandstormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandstormTableViewController.swift; sourceTree = "<group>"; };
+		AACB9DA12217B2E000B7E84B /* TotalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableViewController.swift; sourceTree = "<group>"; };
+		B43C97682235D365001F3AC8 /* ModelObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelObject.swift; sourceTree = "<group>"; };
+		B43C976A2235DCE5001F3AC8 /* FTCScouting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FTCScouting.entitlements; sourceTree = "<group>"; };
+		B463ECD42399E8AF00E81A16 /* SAPOData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAPOData.framework; sourceTree = "<group>"; };
+		B463ECD52399E8B000E81A16 /* SAPCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAPCommon.framework; sourceTree = "<group>"; };
+		B463ECD62399E8B000E81A16 /* SAPFiori.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAPFiori.framework; sourceTree = "<group>"; };
+		B463ECD72399E8B000E81A16 /* SAPFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAPFoundation.framework; sourceTree = "<group>"; };
+		B49960242399E94A00AE703F /* AutonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutonTableViewController.swift; sourceTree = "<group>"; };
+		F6157A812235E028001033E1 /* TeleOpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeleOpViewController.swift; sourceTree = "<group>"; };
+		F6157A822235E028001033E1 /* TeleOp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeleOp.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AACB9D852217B19100B7E84B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B463ECD92399E8B000E81A16 /* SAPCommon.framework in Frameworks */,
+				B463ECDA2399E8B000E81A16 /* SAPFiori.framework in Frameworks */,
+				B463ECDB2399E8B000E81A16 /* SAPFoundation.framework in Frameworks */,
+				B463ECD82399E8B000E81A16 /* SAPOData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AACB9D7F2217B19100B7E84B = {
+			isa = PBXGroup;
+			children = (
+				AACB9D8A2217B19100B7E84B /* FTCScouting */,
+				AACB9D892217B19100B7E84B /* Products */,
+				B4EFC883223EB4D500F3F99E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AACB9D892217B19100B7E84B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AACB9D882217B19100B7E84B /* InfiniteRechargeScouting.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AACB9D8A2217B19100B7E84B /* FTCScouting */ = {
+			isa = PBXGroup;
+			children = (
+				F6157A822235E028001033E1 /* TeleOp.storyboard */,
+				B43C976A2235DCE5001F3AC8 /* FTCScouting.entitlements */,
+				AACB9D8B2217B19100B7E84B /* AppDelegate.swift */,
+				B43C97682235D365001F3AC8 /* ModelObject.swift */,
+				AACB9D8D2217B19100B7E84B /* TeamPickerTableViewController.swift */,
+				B49960242399E94A00AE703F /* AutonTableViewController.swift */,
+				AACB9D9D2217B29400B7E84B /* SandstormTableViewController.swift */,
+				F6157A812235E028001033E1 /* TeleOpViewController.swift */,
+				AACB9DA12217B2E000B7E84B /* TotalTableViewController.swift */,
+				2A5ACCD6224A21C7008109E7 /* ReViewController.swift */,
+				AACB9D8F2217B19100B7E84B /* Main.storyboard */,
+				AACB9D922217B19100B7E84B /* Assets.xcassets */,
+				AACB9D942217B19100B7E84B /* LaunchScreen.storyboard */,
+				AACB9D972217B19100B7E84B /* Info.plist */,
+			);
+			path = FTCScouting;
+			sourceTree = "<group>";
+		};
+		B4EFC883223EB4D500F3F99E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B463ECD52399E8B000E81A16 /* SAPCommon.framework */,
+				B463ECD62399E8B000E81A16 /* SAPFiori.framework */,
+				B463ECD72399E8B000E81A16 /* SAPFoundation.framework */,
+				B463ECD42399E8AF00E81A16 /* SAPOData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AACB9D872217B19100B7E84B /* FTCScouting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AACB9D9A2217B19100B7E84B /* Build configuration list for PBXNativeTarget "FTCScouting" */;
+			buildPhases = (
+				AACB9D842217B19100B7E84B /* Sources */,
+				AACB9D852217B19100B7E84B /* Frameworks */,
+				AACB9D862217B19100B7E84B /* Resources */,
+				F6A04937223EC4140036B116 /* Embed Frameworks */,
+				A19C9EEB223C69D600F9193C /* Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FTCScouting;
+			productName = FRCScouting;
+			productReference = AACB9D882217B19100B7E84B /* InfiniteRechargeScouting.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AACB9D802217B19100B7E84B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Takahashi, Alex";
+				TargetAttributes = {
+					AACB9D872217B19100B7E84B = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = AACB9D832217B19100B7E84B /* Build configuration list for PBXProject "FTCScouting" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AACB9D7F2217B19100B7E84B;
+			productRefGroup = AACB9D892217B19100B7E84B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AACB9D872217B19100B7E84B /* FTCScouting */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AACB9D862217B19100B7E84B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACB9D962217B19100B7E84B /* LaunchScreen.storyboard in Resources */,
+				F6157A842235E028001033E1 /* TeleOp.storyboard in Resources */,
+				AACB9D932217B19100B7E84B /* Assets.xcassets in Resources */,
+				AACB9D912217B19100B7E84B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A19C9EEB223C69D600F9193C /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#!/bin/bash\n\n# This bash script will remove iOS simulator architectures from both of our frameworks when executing release builds\n# http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/\nset -x\nAPP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\nshouldBreak=false\n\nfor ARCH in $ARCHS\ndo\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\nif [ lipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\" ]\nthen\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\nelse \nshouldBreak=true\ncontinue\nfi\ndone\n\nif [ shouldBreak ]\nthen\ncontinue\nfi\n\necho \"Merging extracted architectures: ${ARCHS}\"\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AACB9D842217B19100B7E84B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACB9D8E2217B19100B7E84B /* TeamPickerTableViewController.swift in Sources */,
+				B43C97692235D365001F3AC8 /* ModelObject.swift in Sources */,
+				AACB9D9E2217B29400B7E84B /* SandstormTableViewController.swift in Sources */,
+				AACB9DA22217B2E000B7E84B /* TotalTableViewController.swift in Sources */,
+				F6157A832235E028001033E1 /* TeleOpViewController.swift in Sources */,
+				AACB9D8C2217B19100B7E84B /* AppDelegate.swift in Sources */,
+				2A5ACCD7224A21C7008109E7 /* ReViewController.swift in Sources */,
+				B49960252399E94A00AE703F /* AutonTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AACB9D8F2217B19100B7E84B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AACB9D902217B19100B7E84B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AACB9D942217B19100B7E84B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AACB9D952217B19100B7E84B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AACB9D982217B19100B7E84B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AACB9D992217B19100B7E84B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AACB9D9B2217B19100B7E84B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = MJGRJBXP25;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PROJECT_DIR}/Frameworks/**",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = FTCScouting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.quarrylane.ftc.scouting;
+				PRODUCT_NAME = InfiniteRechargeScouting;
+				PROVISIONING_PROFILE_SPECIFIER = FRCScouting_DevProvProfile;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AACB9D9C2217B19100B7E84B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = MJGRJBXP25;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PROJECT_DIR}/Frameworks/**",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = FTCScouting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.quarrylane.ftc.scouting;
+				PRODUCT_NAME = InfiniteRechargeScouting;
+				PROVISIONING_PROFILE_SPECIFIER = FRCScouting_DevProvProfile;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AACB9D832217B19100B7E84B /* Build configuration list for PBXProject "FTCScouting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AACB9D982217B19100B7E84B /* Debug */,
+				AACB9D992217B19100B7E84B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AACB9D9A2217B19100B7E84B /* Build configuration list for PBXNativeTarget "FTCScouting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AACB9D9B2217B19100B7E84B /* Debug */,
+				AACB9D9C2217B19100B7E84B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AACB9D802217B19100B7E84B /* Project object */;
+}
