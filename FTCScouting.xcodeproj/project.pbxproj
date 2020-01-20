@@ -401,7 +401,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.quarrylane.ftc.scouting;
+				PRODUCT_BUNDLE_IDENTIFIER = org.quarrylane.infiniterecharge.scouting;
 				PRODUCT_NAME = InfiniteRechargeScouting;
 				PROVISIONING_PROFILE_SPECIFIER = FRCScouting_DevProvProfile;
 				SWIFT_VERSION = 4.2;
@@ -429,7 +429,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.quarrylane.ftc.scouting;
+				PRODUCT_BUNDLE_IDENTIFIER = org.quarrylane.infiniterecharge.scouting;
 				PRODUCT_NAME = InfiniteRechargeScouting;
 				PROVISIONING_PROFILE_SPECIFIER = FRCScouting_DevProvProfile;
 				SWIFT_VERSION = 4.2;
