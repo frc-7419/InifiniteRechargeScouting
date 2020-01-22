@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AACB9D872217B19100B7E84B"
                BuildableName = "InfiniteRechargeScouting.app"
-               BlueprintName = "FTCScouting"
-               ReferencedContainer = "container:FTCScouting.xcodeproj">
+               BlueprintName = "InfiniteRechargeScouting"
+               ReferencedContainer = "container:InfiniteRechargeScouting.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,8 +32,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AACB9D872217B19100B7E84B"
             BuildableName = "InfiniteRechargeScouting.app"
-            BlueprintName = "FTCScouting"
-            ReferencedContainer = "container:FTCScouting.xcodeproj">
+            BlueprintName = "InfiniteRechargeScouting"
+            ReferencedContainer = "container:InfiniteRechargeScouting.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -55,8 +55,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AACB9D872217B19100B7E84B"
             BuildableName = "InfiniteRechargeScouting.app"
-            BlueprintName = "FTCScouting"
-            ReferencedContainer = "container:FTCScouting.xcodeproj">
+            BlueprintName = "InfiniteRechargeScouting"
+            ReferencedContainer = "container:InfiniteRechargeScouting.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,8 +72,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AACB9D872217B19100B7E84B"
             BuildableName = "InfiniteRechargeScouting.app"
-            BlueprintName = "FTCScouting"
-            ReferencedContainer = "container:FTCScouting.xcodeproj">
+            BlueprintName = "InfiniteRechargeScouting"
+            ReferencedContainer = "container:InfiniteRechargeScouting.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

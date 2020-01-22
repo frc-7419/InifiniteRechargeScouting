@@ -58,7 +58,7 @@
 		AACB9D9D2217B29400B7E84B /* SandstormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandstormTableViewController.swift; sourceTree = "<group>"; };
 		AACB9DA12217B2E000B7E84B /* TotalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableViewController.swift; sourceTree = "<group>"; };
 		B43C97682235D365001F3AC8 /* ModelObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelObject.swift; sourceTree = "<group>"; };
-		B43C976A2235DCE5001F3AC8 /* FTCScouting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FTCScouting.entitlements; sourceTree = "<group>"; };
+		B43C976A2235DCE5001F3AC8 /* InfiniteRechargeScouting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InfiniteRechargeScouting.entitlements; sourceTree = "<group>"; };
 		B463ECD42399E8AF00E81A16 /* SAPOData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAPOData.framework; sourceTree = "<group>"; };
 		B463ECD52399E8B000E81A16 /* SAPCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAPCommon.framework; sourceTree = "<group>"; };
 		B463ECD62399E8B000E81A16 /* SAPFiori.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAPFiori.framework; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		AACB9D7F2217B19100B7E84B = {
 			isa = PBXGroup;
 			children = (
-				AACB9D8A2217B19100B7E84B /* FTCScouting */,
+				AACB9D8A2217B19100B7E84B /* InfiniteRechargeScouting */,
 				AACB9D892217B19100B7E84B /* Products */,
 				B4EFC883223EB4D500F3F99E /* Frameworks */,
 			);
@@ -100,11 +100,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AACB9D8A2217B19100B7E84B /* FTCScouting */ = {
+		AACB9D8A2217B19100B7E84B /* InfiniteRechargeScouting */ = {
 			isa = PBXGroup;
 			children = (
 				F6157A822235E028001033E1 /* TeleOp.storyboard */,
-				B43C976A2235DCE5001F3AC8 /* FTCScouting.entitlements */,
+				B43C976A2235DCE5001F3AC8 /* InfiniteRechargeScouting.entitlements */,
 				AACB9D8B2217B19100B7E84B /* AppDelegate.swift */,
 				B43C97682235D365001F3AC8 /* ModelObject.swift */,
 				AACB9D8D2217B19100B7E84B /* TeamPickerTableViewController.swift */,
@@ -118,7 +118,7 @@
 				AACB9D942217B19100B7E84B /* LaunchScreen.storyboard */,
 				AACB9D972217B19100B7E84B /* Info.plist */,
 			);
-			path = FTCScouting;
+			path = InfiniteRechargeScouting;
 			sourceTree = "<group>";
 		};
 		B4EFC883223EB4D500F3F99E /* Frameworks */ = {
@@ -135,9 +135,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AACB9D872217B19100B7E84B /* FTCScouting */ = {
+		AACB9D872217B19100B7E84B /* InfiniteRechargeScouting */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AACB9D9A2217B19100B7E84B /* Build configuration list for PBXNativeTarget "FTCScouting" */;
+			buildConfigurationList = AACB9D9A2217B19100B7E84B /* Build configuration list for PBXNativeTarget "InfiniteRechargeScouting" */;
 			buildPhases = (
 				AACB9D842217B19100B7E84B /* Sources */,
 				AACB9D852217B19100B7E84B /* Frameworks */,
@@ -149,7 +149,7 @@
 			);
 			dependencies = (
 			);
-			name = FTCScouting;
+			name = InfiniteRechargeScouting;
 			productName = FRCScouting;
 			productReference = AACB9D882217B19100B7E84B /* InfiniteRechargeScouting.app */;
 			productType = "com.apple.product-type.application";
@@ -174,7 +174,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AACB9D832217B19100B7E84B /* Build configuration list for PBXProject "FTCScouting" */;
+			buildConfigurationList = AACB9D832217B19100B7E84B /* Build configuration list for PBXProject "InfiniteRechargeScouting" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -187,7 +187,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AACB9D872217B19100B7E84B /* FTCScouting */,
+				AACB9D872217B19100B7E84B /* InfiniteRechargeScouting */,
 			);
 		};
 /* End PBXProject section */
@@ -396,6 +396,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = FTCScouting/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -424,6 +425,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = FTCScouting/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,7 +442,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AACB9D832217B19100B7E84B /* Build configuration list for PBXProject "FTCScouting" */ = {
+		AACB9D832217B19100B7E84B /* Build configuration list for PBXProject "InfiniteRechargeScouting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AACB9D982217B19100B7E84B /* Debug */,
@@ -449,7 +451,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AACB9D9A2217B19100B7E84B /* Build configuration list for PBXNativeTarget "FTCScouting" */ = {
+		AACB9D9A2217B19100B7E84B /* Build configuration list for PBXNativeTarget "InfiniteRechargeScouting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AACB9D9B2217B19100B7E84B /* Debug */,
