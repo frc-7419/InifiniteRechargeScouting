@@ -61,7 +61,7 @@ class ModelObject {
     
     var driverPerformance = 0 // 0 = meh, 1 = average, 2 = great
     
-    var penalties;
+    var penalties = false
 
 }
 
