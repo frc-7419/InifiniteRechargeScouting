@@ -15,7 +15,7 @@ class TeamPickerTableViewController: FUIFormTableViewController {
     private var multiSelection = false
     private var pickerPromptText = "Select One Item"
     private var selectedValues = [0]
-    let listOptions = ["1072 – Harker Robotics, 1280 – Ragin' C- Biscuits, 1323 – MadTown Robotics, 1422 – The Neon Knights, 1671 – Buchanan Bird Brains, 1700 – Gatorbotics, 2035 – Robo Rockin' Bots, 2073 – EagleForce, 2085 – RoboDogs, 2135 – Presentation Invasion, 253 – Boba Bots, 254 – The Cheesy Poofs, 2813 – Gear Heads, 2854 – The Prototypes, 3189 – Circuit Breakers, 3303 – Metallic Thunder, 3495 – MindCraft Robotics, 3669 – RoboKnights, 3970 – Duncan Dynamics, 4135 – Iron Patriots, 5026 – Iron Panthers, 5104 – BreakerBots, 5134 – RoboWolves, 5274 – Wolverines, 5419 – Berkelium, 5458 – Digital Minds, 5817 – Uni-Rex, 585 – Cyber Penguins, 5940 – B.R.E.A.D., 6059 – System Overload Robotics, 6241 – CowTech, 6305 – Stable Circuits, 649 – M-SET Fish, 6506 – Steel Boot, 6619 – GravitechX, 6657 – Arborbotics, 6662 – FalconX, 6711 – Millennial Falcons, 6804 – Team Wolfpack, 6884 – Deep-Space, 6926 – RobotiCats, 6981 – Clockwork Soldiers, 7057 – Titanators, 7419 – QLS Tech Support, 751 – barn2robotics, 7528 – Nuts and Bolts, 7663 – Sleuth Robotics, 8048 – EPA robotics team, 840 – Aragon Robotics Team, 852 – Athenian Robotics, 973 – Greybots"]
+    let listOptions = ["1072 – Harker Robotics", "1280 – Ragin' C- Biscuits", "1323 – MadTown Robotics", "1422 – The Neon Knights", "1671 – Buchanan Bird Brains", "1700 – Gatorbotics", "2035 – Robo Rockin' Bots", "2073 – EagleForce", "2085 – RoboDogs", "2135 – Presentation Invasion", "253 – Boba Bots", "254 – The Cheesy Poofs", "2813 – Gear Heads", "2854 – The Prototypes", "3189 – Circuit Breakers", "3303 – Metallic Thunder", "3495 – MindCraft Robotics", "3669 – RoboKnights", "3970 – Duncan Dynamics", "4135 – Iron Patriots", "5026 – Iron Panthers", "5104 – BreakerBots", "5134 – RoboWolves", "5274 – Wolverines", "5419 – Berkelium", "5458 – Digital Minds", "5817 – Uni-Rex", "585 – Cyber Penguins", "5940 – B.R.E.A.D.", "6059 – System Overload Robotics", "6241 – CowTech", "6305 – Stable Circuits", "649 – M-SET Fish", "6506 – Steel Boot", "6619 – GravitechX", "6657 – Arborbotics", "6662 – FalconX", "6711 – Millennial Falcons", "6804 – Team Wolfpack", "6884 – Deep-Space", "6926 – RobotiCats", "6981 – Clockwork Soldiers", "7057 – Titanators", "7419 – QLS Tech Support", "751 – barn2robotics", "7528 – Nuts and Bolts", "7663 – Sleuth Robotics", "8048 – EPA robotics team", "840 – Aragon Robotics Team", "852 – Athenian Robotics", "973 – Greybots"]
     var allowsEmptySelection = false
     var isUndoEnabled = false
     var isSearchEnabled = false
@@ -143,7 +143,7 @@ class TeamPickerTableViewController: FUIFormTableViewController {
     
     @objc func pushNextViewController(sender: UIButton) {
         let nextVC = AutonTableViewController()
-        nextVC.gameData = self.gameData
+        //nextVC.gameData = self.gameData
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }

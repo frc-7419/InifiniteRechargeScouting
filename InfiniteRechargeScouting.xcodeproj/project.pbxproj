@@ -395,7 +395,7 @@
 					"$(PROJECT_DIR)/Frameworks",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = FTCScouting/Info.plist;
+				INFOPLIST_FILE = InfiniteRechargeScouting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -424,7 +424,7 @@
 					"$(PROJECT_DIR)/Frameworks",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = FTCScouting/Info.plist;
+				INFOPLIST_FILE = InfiniteRechargeScouting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
