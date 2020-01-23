@@ -13,7 +13,7 @@
 		AACB9D912217B19100B7E84B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACB9D8F2217B19100B7E84B /* Main.storyboard */; };
 		AACB9D932217B19100B7E84B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AACB9D922217B19100B7E84B /* Assets.xcassets */; };
 		AACB9D962217B19100B7E84B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACB9D942217B19100B7E84B /* LaunchScreen.storyboard */; };
-		AACB9D9E2217B29400B7E84B /* SandstormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB9D9D2217B29400B7E84B /* SandstormTableViewController.swift */; };
+		AACB9D9E2217B29400B7E84B /* AutonomousTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB9D9D2217B29400B7E84B /* AutonomousTableViewController.swift */; };
 		AACB9DA22217B2E000B7E84B /* TotalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB9DA12217B2E000B7E84B /* TotalTableViewController.swift */; };
 		B43C97692235D365001F3AC8 /* ModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C97682235D365001F3AC8 /* ModelObject.swift */; };
 		B463ECD82399E8B000E81A16 /* SAPOData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B463ECD42399E8AF00E81A16 /* SAPOData.framework */; };
@@ -24,7 +24,6 @@
 		B463ECDD2399E8BD00E81A16 /* SAPFiori.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B463ECD62399E8B000E81A16 /* SAPFiori.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B463ECDE2399E8BD00E81A16 /* SAPFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B463ECD72399E8B000E81A16 /* SAPFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B463ECDF2399E8BD00E81A16 /* SAPOData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B463ECD42399E8AF00E81A16 /* SAPOData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B49960252399E94A00AE703F /* AutonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49960242399E94A00AE703F /* AutonTableViewController.swift */; };
 		F6157A832235E028001033E1 /* TeleOpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6157A812235E028001033E1 /* TeleOpViewController.swift */; };
 		F6157A842235E028001033E1 /* TeleOp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6157A822235E028001033E1 /* TeleOp.storyboard */; };
 /* End PBXBuildFile section */
@@ -55,7 +54,7 @@
 		AACB9D922217B19100B7E84B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AACB9D952217B19100B7E84B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AACB9D972217B19100B7E84B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AACB9D9D2217B29400B7E84B /* SandstormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandstormTableViewController.swift; sourceTree = "<group>"; };
+		AACB9D9D2217B29400B7E84B /* AutonomousTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutonomousTableViewController.swift; sourceTree = "<group>"; };
 		AACB9DA12217B2E000B7E84B /* TotalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableViewController.swift; sourceTree = "<group>"; };
 		B43C97682235D365001F3AC8 /* ModelObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelObject.swift; sourceTree = "<group>"; };
 		B43C976A2235DCE5001F3AC8 /* InfiniteRechargeScouting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InfiniteRechargeScouting.entitlements; sourceTree = "<group>"; };
@@ -63,7 +62,6 @@
 		B463ECD52399E8B000E81A16 /* SAPCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAPCommon.framework; sourceTree = "<group>"; };
 		B463ECD62399E8B000E81A16 /* SAPFiori.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAPFiori.framework; sourceTree = "<group>"; };
 		B463ECD72399E8B000E81A16 /* SAPFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAPFoundation.framework; sourceTree = "<group>"; };
-		B49960242399E94A00AE703F /* AutonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutonTableViewController.swift; sourceTree = "<group>"; };
 		F6157A812235E028001033E1 /* TeleOpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeleOpViewController.swift; sourceTree = "<group>"; };
 		F6157A822235E028001033E1 /* TeleOp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeleOp.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,8 +106,7 @@
 				AACB9D8B2217B19100B7E84B /* AppDelegate.swift */,
 				B43C97682235D365001F3AC8 /* ModelObject.swift */,
 				AACB9D8D2217B19100B7E84B /* TeamPickerTableViewController.swift */,
-				B49960242399E94A00AE703F /* AutonTableViewController.swift */,
-				AACB9D9D2217B29400B7E84B /* SandstormTableViewController.swift */,
+				AACB9D9D2217B29400B7E84B /* AutonomousTableViewController.swift */,
 				F6157A812235E028001033E1 /* TeleOpViewController.swift */,
 				AACB9DA12217B2E000B7E84B /* TotalTableViewController.swift */,
 				2A5ACCD6224A21C7008109E7 /* ReViewController.swift */,
@@ -234,12 +231,11 @@
 			files = (
 				AACB9D8E2217B19100B7E84B /* TeamPickerTableViewController.swift in Sources */,
 				B43C97692235D365001F3AC8 /* ModelObject.swift in Sources */,
-				AACB9D9E2217B29400B7E84B /* SandstormTableViewController.swift in Sources */,
+				AACB9D9E2217B29400B7E84B /* AutonomousTableViewController.swift in Sources */,
 				AACB9DA22217B2E000B7E84B /* TotalTableViewController.swift in Sources */,
 				F6157A832235E028001033E1 /* TeleOpViewController.swift in Sources */,
 				AACB9D8C2217B19100B7E84B /* AppDelegate.swift in Sources */,
 				2A5ACCD7224A21C7008109E7 /* ReViewController.swift in Sources */,
-				B49960252399E94A00AE703F /* AutonTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

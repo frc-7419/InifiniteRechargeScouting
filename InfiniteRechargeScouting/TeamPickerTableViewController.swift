@@ -142,7 +142,7 @@ class TeamPickerTableViewController: FUIFormTableViewController {
     }
     
     @objc func pushNextViewController(sender: UIButton) {
-        let nextVC = AutonTableViewController()
+        let nextVC = AutonomousTableViewController()
         //nextVC.gameData = self.gameData
         self.navigationController?.pushViewController(nextVC, animated: true)
     }

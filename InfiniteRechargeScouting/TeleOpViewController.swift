@@ -11,7 +11,7 @@ import UIKit
 
 class TeleOpViewController: UIViewController {
     
-//    var gameData = ModelObject.shared
+    var gameData = ModelObject.shared
 //
 //    struct RocketGrid {
 //        var topLeft: Bool = false
