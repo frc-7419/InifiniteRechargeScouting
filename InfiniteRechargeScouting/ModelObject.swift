@@ -23,6 +23,7 @@ class ModelObject {
     var match = 0
     var preload = 0
     var initPos = 0
+    var teamPos = 0
     
     // Auton
     var autonHigh = 0
