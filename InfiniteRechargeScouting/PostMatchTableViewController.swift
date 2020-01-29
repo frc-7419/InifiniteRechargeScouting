@@ -26,14 +26,14 @@ class PostMatchTableViewController: UITableViewController {
 
         switch indexPath.row {
           case 0:
-              switchFormCell.keyName = "Did Robot DC?"
+              switchFormCell.keyName = "Disconnect?"
               switchFormCell.value = gameData.disconnect
               switchFormCell.onChangeHandler = { [unowned self] newValue in
                   self.gameData.disconnect = newValue
               }
               return switchFormCell
         case 1:
-            switchFormCell.keyName = "Did Robot Fall Over?"
+            switchFormCell.keyName = "Fell Over?"
             switchFormCell.value = gameData.fall
             switchFormCell.onChangeHandler = { [unowned self] newValue in
                 self.gameData.fall = newValue
