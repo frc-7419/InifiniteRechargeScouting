@@ -45,6 +45,8 @@ class ModelObject {
     var colorWheel = ""
     var shotDistance = ""
     var hang = ""
+    var driverPerformance = 0 // 0 = meh, 1 = average, 2 = great
+    var penalties = false
     
 //    // Color Wheel Select
 //    var messedUp = false;
@@ -62,10 +64,6 @@ class ModelObject {
 //    var failed = false;
 //    var parked = false;
 //    var outOfZone = false;
-    
-    var driverPerformance = 0 // 0 = meh, 1 = average, 2 = great
-    
-    var penalties = false
 
 }
 

@@ -23,6 +23,8 @@ class PostMatchTableViewController: UITableViewController {
         let shotDistanceOptions = ["Near", "Far", "Both"]
         
         let hangOptions = ["No", "Yes", "Balanced", "Failed", "Parked"]
+        
+        let rankOptions = ["1", "2", "3"]
 
         switch indexPath.row {
           case 0:
@@ -98,10 +100,33 @@ class PostMatchTableViewController: UITableViewController {
             }
             return multipleOptionCell
         case 5:
-            switchFormCell.keyName = "Could Robot Go Under Trench?"
+            switchFormCell.keyName = "Under Trench?"
             switchFormCell.value = gameData.trench
             switchFormCell.onChangeHandler = { [unowned self] newValue in
                 self.gameData.trench = newValue
+            }
+            return switchFormCell
+        case 6:
+            multipleOptionCell.valueOptions = rankOptions
+            multipleOptionCell.keyName = "Driver Performance"
+            multipleOptionCell.isEditable = true
+            multipleOptionCell.onChangeHandler = { newValue in
+                if (newValue == 0) {
+                    self.gameData.driverPerformance = 1
+                }
+                else if (newValue == 1) {
+                    self.gameData.driverPerformance = 2
+                }
+                else {
+                    self.gameData.driverPerformance = 3
+                }
+            }
+            return multipleOptionCell
+        case 7:
+            switchFormCell.keyName = "Penalties"
+            switchFormCell.value = gameData.penalties
+            switchFormCell.onChangeHandler = { [unowned self] newValue in
+                self.gameData.penalties = newValue
             }
             return switchFormCell
         default:
@@ -110,7 +135,7 @@ class PostMatchTableViewController: UITableViewController {
     }
 
      override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 5
+            return 8
         }
 
         /*
