@@ -43,24 +43,25 @@ class ModelObject {
     var fall = false
     var trench = false
     var colorWheel = ""
-    var colorWheelIndex = 0
+    var shotDistance = ""
+    var hang = ""
     
-    // Color Wheel Select
-    var messedUp = false;
-    var color = false;
-    var rotation = false;
-    var noneColorWheel = false;
+//    // Color Wheel Select
+//    var messedUp = false;
+//    var color = false;
+//    var rotation = false;
+//    var noneColorWheel = false;
     
-    // Shot Select
-    var nearShot = false
-    var farShot = false;
-    
-    // Hang
-    var hang = false;
-    var balanced = false;
-    var failed = false;
-    var parked = false;
-    var outOfZone = false;
+//    // Shot Select
+//    var nearShot = false
+//    var farShot = false;
+//
+//    // Hang
+//    var hang = false;
+//    var balanced = false;
+//    var failed = false;
+//    var parked = false;
+//    var outOfZone = false;
     
     var driverPerformance = 0 // 0 = meh, 1 = average, 2 = great
     

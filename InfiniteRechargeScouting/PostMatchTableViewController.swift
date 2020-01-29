@@ -19,6 +19,10 @@ class PostMatchTableViewController: UITableViewController {
         let multipleOptionCell = self.tableView.dequeueReusableCell(withIdentifier: FUISegmentedControlFormCell.reuseIdentifier, for: indexPath) as! FUISegmentedControlFormCell
 
         let colorWheelOptions = ["No Attempt", "Rotation", "Color", "Failed"]
+        
+        let shotDistanceOptions = ["Near", "Far", "Both"]
+        
+        let hangOptions = ["No", "Yes", "Balanced", "Failed", "Parked"]
 
         switch indexPath.row {
           case 0:
@@ -29,36 +33,77 @@ class PostMatchTableViewController: UITableViewController {
               }
               return switchFormCell
         case 1:
-           switchFormCell.keyName = "Did Robot Fall Over?"
+            switchFormCell.keyName = "Did Robot Fall Over?"
             switchFormCell.value = gameData.fall
             switchFormCell.onChangeHandler = { [unowned self] newValue in
                 self.gameData.fall = newValue
             }
             return switchFormCell
         case 2:
-            // Row for 'Scored High'
             multipleOptionCell.valueOptions = colorWheelOptions
             multipleOptionCell.keyName = "Color Wheel"
-            multipleOptionCell.value = gameData.colorWheelIndex
             multipleOptionCell.isEditable = true
             multipleOptionCell.onChangeHandler = { newValue in
-                self.gameData.autonHighIndex = self.gameData.autonHigh
+                if (newValue == 0) {
+                    self.gameData.colorWheel = "No Attempt"
+                }
+                else if (newValue == 1) {
+                    self.gameData.colorWheel = "Rotation"
+                }
+                else if (newValue == 2) {
+                    self.gameData.colorWheel = "Color"
+                }
+                else {
+                    self.gameData.colorWheel = "Failed"
+                }
             }
             return multipleOptionCell
         case 3:
-            switchFormCell.keyName = "Additional Power Cells?"
-            switchFormCell.value = gameData.pickup
+            multipleOptionCell.valueOptions = shotDistanceOptions
+            multipleOptionCell.keyName = "Shot Distance"
+            multipleOptionCell.isEditable = true
+            multipleOptionCell.onChangeHandler = { newValue in
+                if (newValue == 0) {
+                    self.gameData.shotDistance = "Near"
+                }
+                else if (newValue == 1) {
+                    self.gameData.shotDistance = "Far"
+                }
+                else {
+                    self.gameData.shotDistance = "Both"
+                }
+            }
+            return multipleOptionCell
+        case 4:
+           multipleOptionCell.valueOptions = hangOptions
+           multipleOptionCell.keyName = "Hang"
+           multipleOptionCell.isEditable = true
+           multipleOptionCell.onChangeHandler = { newValue in
+               if (newValue == 0) {
+                   self.gameData.hang = "No"
+               }
+               else if (newValue == 1) {
+                   self.gameData.hang = "Yes"
+               }
+               else if (newValue == 2) {
+                   self.gameData.hang = "Balanced"
+               }
+               else if (newValue == 3) {
+                   self.gameData.colorWheel = "Failed"
+               }
+               else {
+                   self.gameData.colorWheel = "Parked"
+               }
+                
+            }
+            return multipleOptionCell
+        case 5:
+            switchFormCell.keyName = "Could Robot Go Under Trench?"
+            switchFormCell.value = gameData.trench
             switchFormCell.onChangeHandler = { [unowned self] newValue in
-                self.gameData.pickup = newValue
+                self.gameData.trench = newValue
             }
             return switchFormCell
-        case 4:
-               switchFormCell.keyName = "Additional Shots Scored?"
-               switchFormCell.value = gameData.additionalPoints
-               switchFormCell.onChangeHandler = { [unowned self] newValue in
-                   self.gameData.additionalPoints = newValue
-               }
-               return switchFormCell
         default:
             return multipleOptionCell
         }
