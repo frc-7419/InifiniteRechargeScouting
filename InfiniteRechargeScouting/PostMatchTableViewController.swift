@@ -123,7 +123,7 @@ class PostMatchTableViewController: UITableViewController {
             }
             return multipleOptionCell
         case 7:
-            switchFormCell.keyName = "Penalties"
+            switchFormCell.keyName = "Penalties?"
             switchFormCell.value = gameData.penalties
             switchFormCell.onChangeHandler = { [unowned self] newValue in
                 self.gameData.penalties = newValue
