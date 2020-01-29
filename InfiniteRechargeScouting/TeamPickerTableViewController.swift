@@ -9,7 +9,7 @@
 import SAPFiori
 import UIKit
 
-class TeamPickerTableViewController: FUIFormTableViewController {
+class PreMatchTableViewController: FUIFormTableViewController {
     
     // List Picker
     private var multiSelection = false
