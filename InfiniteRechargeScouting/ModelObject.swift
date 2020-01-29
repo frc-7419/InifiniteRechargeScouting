@@ -30,9 +30,7 @@ class ModelObject {
     var moved = false
     var pickup = false
     var additionalPoints = false
-    
-    var autonHighIndex = 0
-    var autonLowIndex = 0
+
     
     // Teleop
     var teleHitHigh = 0
@@ -44,6 +42,8 @@ class ModelObject {
     var disconnect = false
     var fall = false
     var trench = false
+    var colorWheel = ""
+    var colorWheelIndex = 0
     
     // Color Wheel Select
     var messedUp = false;
