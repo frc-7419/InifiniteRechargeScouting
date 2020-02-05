@@ -32,6 +32,9 @@ class ModelObject {
     var pickup = false
     var additionalPoints = false
     
+    var autonHighIndex = 0
+    var autonLowIndex = 0
+    
     // Teleop
     var teleHitHigh = 0
     var teleHitLow = 0

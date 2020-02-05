@@ -195,8 +195,10 @@ class PreMatchTableViewController: FUIFormTableViewController {
     }
     
     @objc func pushNextViewController(sender: UIButton) {
-        let nextVC = AutonTableViewController()
-        //nextVC.gameData = self.gameData
+
+        //let nextVC = TeleOpViewController()
+        let nextVC = UIStoryboard(name: "TeleOp", bundle: nil).instantiateInitialViewController() as! TeleOpViewController
+        nextVC.gameData = self.gameData
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }
