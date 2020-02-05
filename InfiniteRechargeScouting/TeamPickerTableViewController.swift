@@ -9,7 +9,7 @@
 import SAPFiori
 import UIKit
 
-class TeamPickerTableViewController: FUIFormTableViewController {
+class PreMatchTableViewController: FUIFormTableViewController {
     
     // List Picker
     private var multiSelection = false
@@ -31,15 +31,34 @@ class TeamPickerTableViewController: FUIFormTableViewController {
     var gameData = ModelObject.shared
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let noteCell = tableView.dequeueReusableCell(withIdentifier: FUINoteFormCell.reuseIdentifier, for: indexPath) as! FUINoteFormCell
+        
         // List Picker
         let listPickerCell = tableView.dequeueReusableCell(withIdentifier: FUIListPickerFormCell.reuseIdentifier, for: indexPath) as! FUIListPickerFormCell
         
         let cell = tableView.dequeueReusableCell(withIdentifier: FUIValuePickerFormCell.reuseIdentifier, for: indexPath) as! FUIValuePickerFormCell
         
+        let multipleOptionCell = self.tableView.dequeueReusableCell(withIdentifier: FUISegmentedControlFormCell.reuseIdentifier, for: indexPath) as! FUISegmentedControlFormCell
+        let startingPosition = ["L","M","R"]
+        let redPos = ["Red1","Red2","Red3"]
+        let bluePos = ["Blue1","Blue2","Blue3"]
+        let preloads = ["0","1","2","3"]
+        
         switch indexPath.section{
         case 0:
             switch indexPath.row{
             case 0:
+                noteCell.isEditable = true
+                noteCell.value = gameData.scoutName
+                noteCell.placeholder.text = "Scout Name"
+                noteCell.maxNumberOfLines = 2
+                noteCell.onChangeHandler = { [unowned self] newValue in
+                    self.gameData.scoutName = newValue
+                }
+                noteCell.isTrackingLiveChanges = true
+                return noteCell
+            case 1:
                 
                 listPickerCell.keyName = "Team"
                 listPickerCell.value = [listOptions.firstIndex(of: gameData.teamName) ?? 0]
@@ -59,7 +78,7 @@ class TeamPickerTableViewController: FUIFormTableViewController {
                 listPickerCell.listPicker.isSearchEnabled = isSearchEnabled
                 return listPickerCell
                 
-            case 1:
+            case 2:
                 valuePickerCell = cell // keep reference for onChangeHandler
                 cell.keyName = "Match Number"
                 cell.valueOptions = valueOptions
@@ -70,7 +89,36 @@ class TeamPickerTableViewController: FUIFormTableViewController {
                 }
                 
                 return cell
-                
+            case 3:
+                multipleOptionCell.valueOptions = startingPosition
+                multipleOptionCell.keyName = "Initial Position"
+                multipleOptionCell.value = gameData.initPos
+                multipleOptionCell.isEditable = true
+                multipleOptionCell.onChangeHandler = { newValue in
+                    self.gameData.initPos = newValue
+
+                }
+                return multipleOptionCell
+            case 4,5:
+                multipleOptionCell.valueOptions = indexPath.row == 4 ? redPos : bluePos
+                multipleOptionCell.keyName = indexPath.row == 4 ? "Team Position" : ""
+                multipleOptionCell.value = indexPath.row == 4 ? gameData.teamPos : gameData.teamPos - 3
+                multipleOptionCell.isEditable = true
+                multipleOptionCell.onChangeHandler = { newValue in
+                    self.gameData.teamPos = indexPath.row == 4 ? newValue : newValue + 3
+                    self.tableView.reloadRows(at: [IndexPath(row: 4, section: 0),IndexPath(row: 5, section: 0)], with: .automatic)
+                }
+                return multipleOptionCell
+            case 6:
+                multipleOptionCell.valueOptions = preloads
+                multipleOptionCell.keyName = "Preloads"
+                multipleOptionCell.value = gameData.initPos
+                multipleOptionCell.isEditable = true
+                multipleOptionCell.onChangeHandler = { newValue in
+                    self.gameData.preload = newValue
+
+                }
+                return multipleOptionCell
             default:
                 print ("error")
             }
@@ -89,7 +137,7 @@ class TeamPickerTableViewController: FUIFormTableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // TODO: Return the number of cells
-        return 2
+        return 7
     }
     
     /*
@@ -116,6 +164,7 @@ class TeamPickerTableViewController: FUIFormTableViewController {
         if let matchNo = Int(valueOptions[0]) {
             self.gameData.match = matchNo
         }
+        tableView.register(FUINoteFormCell.self, forCellReuseIdentifier: FUINoteFormCell.reuseIdentifier)
         
         // List Picker
         tableView.register(FUIListPickerFormCell.self, forCellReuseIdentifier: FUIListPickerFormCell.reuseIdentifier)
@@ -126,6 +175,10 @@ class TeamPickerTableViewController: FUIFormTableViewController {
         
         // Value Picker
         tableView.register(FUIValuePickerFormCell.self, forCellReuseIdentifier: FUIValuePickerFormCell.reuseIdentifier)
+        tableView.estimatedRowHeight = 44.5
+        tableView.rowHeight = UITableView.automaticDimension
+        
+        tableView.register(FUISegmentedControlFormCell.self, forCellReuseIdentifier: FUISegmentedControlFormCell.reuseIdentifier)
         tableView.estimatedRowHeight = 44.5
         tableView.rowHeight = UITableView.automaticDimension
         
