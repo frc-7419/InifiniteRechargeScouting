@@ -96,7 +96,7 @@ class AutonomousTableViewController: UITableViewController {
         }
         
         @objc func pushNextViewController(sender: UIButton) {
-            let nextVC = UIStoryboard.init(name: "TeleOp", bundle: Bundle.main).instantiateViewController(withIdentifier: "TeleOpViewController") as! TeleOpViewController
+            let nextVC = UIStoryboard(name: "TeleOp", bundle: nil).instantiateInitialViewController() as! TeleOpViewController
             nextVC.gameData = self.gameData
             self.navigationController?.pushViewController(nextVC, animated: true)
         }
