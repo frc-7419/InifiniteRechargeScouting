@@ -9,13 +9,15 @@
 import SAPFiori
 import UIKit
 
-class PreMatchTableViewController: FUIFormTableViewController {
+class TeamPickerTableViewController: FUIFormTableViewController {
     
     // List Picker
     private var multiSelection = false
     private var pickerPromptText = "Select One Item"
-    private var selectedValues = [0]
-    let listOptions = ["1072 – Harker Robotics", "1280 – Ragin' C- Biscuits", "1323 – MadTown Robotics", "1422 – The Neon Knights", "1671 – Buchanan Bird Brains", "1700 – Gatorbotics", "2035 – Robo Rockin' Bots", "2073 – EagleForce", "2085 – RoboDogs", "2135 – Presentation Invasion", "253 – Boba Bots", "254 – The Cheesy Poofs", "2813 – Gear Heads", "2854 – The Prototypes", "3189 – Circuit Breakers", "3303 – Metallic Thunder", "3495 – MindCraft Robotics", "3669 – RoboKnights", "3970 – Duncan Dynamics", "4135 – Iron Patriots", "5026 – Iron Panthers", "5104 – BreakerBots", "5134 – RoboWolves", "5274 – Wolverines", "5419 – Berkelium", "5458 – Digital Minds", "5817 – Uni-Rex", "585 – Cyber Penguins", "5940 – B.R.E.A.D.", "6059 – System Overload Robotics", "6241 – CowTech", "6305 – Stable Circuits", "649 – M-SET Fish", "6506 – Steel Boot", "6619 – GravitechX", "6657 – Arborbotics", "6662 – FalconX", "6711 – Millennial Falcons", "6804 – Team Wolfpack", "6884 – Deep-Space", "6926 – RobotiCats", "6981 – Clockwork Soldiers", "7057 – Titanators", "7419 – QLS Tech Support", "751 – barn2robotics", "7528 – Nuts and Bolts", "7663 – Sleuth Robotics", "8048 – EPA robotics team", "840 – Aragon Robotics Team", "852 – Athenian Robotics", "973 – Greybots"]
+    private var teamValues = [0]
+    private var scoutValues = [0]
+    let teamListOptions = ["1072 – Harker Robotics", "1280 – Ragin' C- Biscuits", "1323 – MadTown Robotics", "1422 – The Neon Knights", "1671 – Buchanan Bird Brains", "1700 – Gatorbotics", "2035 – Robo Rockin' Bots", "2073 – EagleForce", "2085 – RoboDogs", "2135 – Presentation Invasion", "253 – Boba Bots", "254 – The Cheesy Poofs", "2813 – Gear Heads", "2854 – The Prototypes", "3189 – Circuit Breakers", "3303 – Metallic Thunder", "3495 – MindCraft Robotics", "3669 – RoboKnights", "3970 – Duncan Dynamics", "4135 – Iron Patriots", "5026 – Iron Panthers", "5104 – BreakerBots", "5134 – RoboWolves", "5274 – Wolverines", "5419 – Berkelium", "5458 – Digital Minds", "5817 – Uni-Rex", "585 – Cyber Penguins", "5940 – B.R.E.A.D.", "6059 – System Overload Robotics", "6241 – CowTech", "6305 – Stable Circuits", "649 – M-SET Fish", "6506 – Steel Boot", "6619 – GravitechX", "6657 – Arborbotics", "6662 – FalconX", "6711 – Millennial Falcons", "6804 – Team Wolfpack", "6884 – Deep-Space", "6926 – RobotiCats", "6981 – Clockwork Soldiers", "7057 – Titanators", "7419 – QLS Tech Support", "751 – barn2robotics", "7528 – Nuts and Bolts", "7663 – Sleuth Robotics", "8048 – EPA robotics team", "840 – Aragon Robotics Team", "852 – Athenian Robotics", "973 – Greybots"]
+    let scoutListOptions = ["Wesley", "Karan", "Neha"]
     var allowsEmptySelection = false
     var isUndoEnabled = false
     var isSearchEnabled = false
@@ -49,31 +51,39 @@ class PreMatchTableViewController: FUIFormTableViewController {
         case 0:
             switch indexPath.row{
             case 0:
-                noteCell.isEditable = true
-                noteCell.value = gameData.scoutName
-                noteCell.placeholder.text = "Scout Name"
-                noteCell.maxNumberOfLines = 2
-                noteCell.onChangeHandler = { [unowned self] newValue in
-                    self.gameData.scoutName = newValue
-                }
-                noteCell.isTrackingLiveChanges = true
-                return noteCell
-            case 1:
-                
-                listPickerCell.keyName = "Team"
-                listPickerCell.value = [listOptions.firstIndex(of: gameData.teamName) ?? 0]
+                listPickerCell.keyName = "Scout:"
+                listPickerCell.value = [scoutListOptions.firstIndex(of: gameData.scoutName) ?? 0]
                 listPickerCell.isEditable = isEditable
                 listPickerCell.allowsMultipleSelection = multiSelection
                 listPickerCell.allowsEmptySelection = allowsEmptySelection
-                listPickerCell.valueLabel.text = descriptionForSelectedStrings(listOptions, at: selectedValues)
+                listPickerCell.valueLabel.text = descriptionForSelectedStrings(scoutListOptions, at: scoutValues)
                 listPickerCell.isUndoEnabled = isUndoEnabled
-                listPickerCell.valueOptions = listOptions
+                listPickerCell.valueOptions = scoutListOptions
                 listPickerCell.onChangeHandler = { [unowned self] newValues in
-                    self.selectedValues = newValues
-                    self.gameData.teamName = self.listOptions[listPickerCell.value[0]]
+                    self.scoutValues = newValues
+                    self.gameData.scoutName = self.scoutListOptions[listPickerCell.value[0]]
+                    NSLog("Picked scout name \(self.gameData.scoutName)")
+                }
+                self.gameData.scoutName = self.scoutListOptions[listPickerCell.value[0]]
+                listPickerCell.listPicker.prompt = pickerPromptText
+                listPickerCell.listPicker.isSearchEnabled = isSearchEnabled
+                return listPickerCell
+            case 1:
+                
+                listPickerCell.keyName = "Team:"
+                listPickerCell.value = [teamListOptions.firstIndex(of: gameData.teamName) ?? 0]
+                listPickerCell.isEditable = isEditable
+                listPickerCell.allowsMultipleSelection = multiSelection
+                listPickerCell.allowsEmptySelection = allowsEmptySelection
+                listPickerCell.valueLabel.text = descriptionForSelectedStrings(teamListOptions, at: teamValues)
+                listPickerCell.isUndoEnabled = isUndoEnabled
+                listPickerCell.valueOptions = teamListOptions
+                listPickerCell.onChangeHandler = { [unowned self] newValues in
+                    self.teamValues = newValues
+                    self.gameData.teamName = self.teamListOptions[listPickerCell.value[0]]
                     NSLog("Picked team name \(self.gameData.teamName)")
                 }
-                self.gameData.teamName = self.listOptions[listPickerCell.value[0]]
+                self.gameData.teamName = self.teamListOptions[listPickerCell.value[0]]
                 listPickerCell.listPicker.prompt = pickerPromptText
                 listPickerCell.listPicker.isSearchEnabled = isSearchEnabled
                 return listPickerCell
@@ -158,7 +168,8 @@ class PreMatchTableViewController: FUIFormTableViewController {
         
         // Set some initial values
         // Team name
-        self.gameData.teamName = self.listOptions[0]
+        self.gameData.teamName = self.teamListOptions[0]
+        self.gameData.scoutName = self.scoutListOptions[0];
         
         // Team number
         if let matchNo = Int(valueOptions[0]) {
@@ -189,7 +200,10 @@ class PreMatchTableViewController: FUIFormTableViewController {
         
         self.gameData = ModelObject.shared
         if self.gameData.teamName.isEmpty {
-            self.selectedValues = [0]
+            self.teamValues = [0]
+        }
+        if self.gameData.scoutName.isEmpty {
+            self.scoutValues = [0]
         }
         self.tableView.reloadData()
     }
