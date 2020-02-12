@@ -15,6 +15,11 @@ class TeleOpViewController: UIViewController {
     @IBOutlet var highScoredButton: FUIButton!
     @IBOutlet var lowMissedButton: FUIButton!
     @IBOutlet var lowScoredButton: FUIButton!
+
+    var highMiss = "";
+    var highScore = "";
+    var lowMiss = "";
+    var lowScore = "";
     
     var gameData = ModelObject.shared
 
@@ -32,15 +37,31 @@ class TeleOpViewController: UIViewController {
 
         self.highMissedButton.didSelectHandler = { [weak self] _ in
             self?.gameData.teleMissHigh += 1
+            if let v = self?.gameData.teleMissHigh {
+                self?.highMiss = "\(v)"
+            }
+            self?.highMissedButton.setTitle("High Missed " + (self?.highMiss ?? "0"), for:.normal)
         }
         self.highScoredButton.didSelectHandler = { [weak self] _ in
             self?.gameData.teleHitHigh += 1
+            if let v = self?.gameData.teleHitHigh {
+                self?.highScore = "\(v)"
+            }
+            self?.highScoredButton.setTitle("High Scored " + (self?.highScore ?? "0"), for:.normal)
         }
         self.lowMissedButton.didSelectHandler = { [weak self] _ in
             self?.gameData.teleMissLow += 1
+            if let v = self?.gameData.teleMissLow {
+                self?.lowMiss = "\(v)"
+            }
+            self?.lowMissedButton.setTitle("Low Missed " + (self?.lowMiss ?? "0"), for:.normal)
         }
         self.lowScoredButton.didSelectHandler = { [weak self] _ in
             self?.gameData.teleHitLow += 1
+            if let v = self?.gameData.teleHitLow {
+                self?.lowScore = "\(v)"
+            }
+            self?.lowScoredButton.setTitle("Low Scored " + (self?.lowScore ?? "0"), for:.normal)
         }
         
     }
