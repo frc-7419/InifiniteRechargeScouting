@@ -21,53 +21,20 @@ class AutonomousTableViewController: UITableViewController {
 
         switch indexPath.row {
         case 0:
-            // Row for 'Scored Low2'
+            //Low Level Auton
             multipleOptionCell.valueOptions = autonOptions
-
-            switch gameData.autonLow {
-                case 1:
-                    gameData.autonLowIndex = 0
-                case 2:
-                    gameData.autonLowIndex = 1
-            default:
-                print("You screwed up at line 41")
-            }
             multipleOptionCell.keyName = "Scored Low"
-            multipleOptionCell.value = gameData.autonLowIndex
             multipleOptionCell.isEditable = true
             multipleOptionCell.onChangeHandler = { newValue in
-                self.gameData.autonHighIndex = newValue
-                if (newValue == 0) {
-                    self.gameData.autonLow = 1
-                }
-                else {
-                    self.gameData.autonLow = 2
-                }
+                self.gameData.autonLow = newValue
             }
             return multipleOptionCell
         case 1:
-            // Row for 'Scored High'
             multipleOptionCell.valueOptions = autonOptions
-
-            switch gameData.autonHigh {
-                case 1:
-                    gameData.autonHighIndex = 0
-                case 2:
-                    gameData.autonHighIndex = 1
-            default:
-                print("You screwed up at line 41")
-            }
             multipleOptionCell.keyName = "Scored High"
-            multipleOptionCell.value = gameData.autonHighIndex
             multipleOptionCell.isEditable = true
             multipleOptionCell.onChangeHandler = { newValue in
-                self.gameData.autonHighIndex = newValue
-                if (newValue == 0) {
-                    self.gameData.autonHigh = 1
-                }
-                else {
-                    self.gameData.autonHigh = 2
-                }
+                self.gameData.autonHigh = newValue
             }
             return multipleOptionCell
         
