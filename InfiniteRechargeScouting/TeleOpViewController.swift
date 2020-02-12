@@ -79,7 +79,7 @@ class TeleOpViewController: UIViewController {
 
     @objc func pushNextViewController(sender: UIButton) {
 //        fillGameData()
-        let nextVC = TotalTableViewController()
+        let nextVC = PostMatchTableViewController()
 //        nextVC.gameData = self.gameData
         self.navigationController?.pushViewController(nextVC, animated: true)
     }

@@ -31,9 +31,7 @@ class ModelObject {
     var moved = false
     var pickup = false
     var additionalPoints = false
-    
-    var autonHighIndex = 0
-    var autonLowIndex = 0
+
     
     // Teleop
     var teleHitHigh = 0
@@ -45,27 +43,28 @@ class ModelObject {
     var disconnect = false
     var fall = false
     var trench = false
-    
-    // Color Wheel Select
-    var messedUp = false;
-    var color = false;
-    var rotation = false;
-    var noneColorWheel = false;
-    
-    // Shot Select
-    var nearShot = false
-    var farShot = false;
-    
-    // Hang
-    var hang = false;
-    var balanced = false;
-    var failed = false;
-    var parked = false;
-    var outOfZone = false;
-    
+    var colorWheel = ""
+    var shotDistance = ""
+    var hang = ""
     var driverPerformance = 0 // 0 = meh, 1 = average, 2 = great
-    
     var penalties = false
+    
+//    // Color Wheel Select
+//    var messedUp = false;
+//    var color = false;
+//    var rotation = false;
+//    var noneColorWheel = false;
+    
+//    // Shot Select
+//    var nearShot = false
+//    var farShot = false;
+//
+//    // Hang
+//    var hang = false;
+//    var balanced = false;
+//    var failed = false;
+//    var parked = false;
+//    var outOfZone = false;
 
 }
 
