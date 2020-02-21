@@ -166,9 +166,30 @@ class PostMatchTableViewController: UITableViewController {
         }
 
         @objc func pushNextViewController(sender: UIButton) {
-            let nextVC = UIStoryboard.init(name: "TeleOp", bundle: Bundle.main).instantiateViewController(withIdentifier: "TeleOpViewController") as! TeleOpViewController
-            nextVC.gameData = self.gameData
-            self.navigationController?.pushViewController(nextVC, animated: true)
+            let jsonEncoder = JSONEncoder()
+            let jsonData = try! jsonEncoder.encode(self.gameData)
+            
+            let url = URL(string: "https://script.google.com/macros/s/AKfycbweSRv4K89o9c1lzbJGP1wSGCLNCoODeqdXzkeBgubE7eKBdF_l/exec")!
+            var request = URLRequest(url: url)
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.httpMethod = "POST"
+            request.httpBody = jsonData
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                guard let data = data, error == nil else {
+                    print(error?.localizedDescription ?? "No data")
+                    return
+                }
+                let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+                if let responseJSON = responseJSON as? [String: Any] {
+                    print(responseJSON)
+                }
+            }
+
+            task.resume()
+            
+//            let nextVC = UIStoryboard.init(name: "TeleOp", bundle: Bundle.main).instantiateViewController(withIdentifier: "TeleOpViewController") as! TeleOpViewController
+//            nextVC.gameData = self.gameData
+//            self.navigationController?.pushViewController(nextVC, animated: true)
         }
         
     }

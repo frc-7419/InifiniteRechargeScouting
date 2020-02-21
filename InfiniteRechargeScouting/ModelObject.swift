@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ModelObject {
+class ModelObject: Codable {
     
     static private(set) var shared = ModelObject()
     
