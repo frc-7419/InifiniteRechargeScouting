@@ -92,10 +92,10 @@ class TeamPickerTableViewController: FUIFormTableViewController {
                 valuePickerCell = cell // keep reference for onChangeHandler
                 cell.keyName = "Match Number"
                 cell.valueOptions = valueOptions
-                cell.value = self.gameData.match - 1 <= 0 ? 0 : self.gameData.match  // index of first value as default
+                cell.value = self.gameData.match <= 0 ? 0 : self.gameData.match  // index of first value as default
                 cell.onChangeHandler = { newValue in
                     print("Selected value option: \(self.valueOptions[newValue])")
-                    self.gameData.match = newValue + 1
+                    self.gameData.match = newValue
                 }
                 
                 return cell
