@@ -43,7 +43,8 @@ class ModelObject: Codable {
     var disconnect = false
     var fall = false
     var trench = false
-    var colorWheel = ""
+    var colorSelection = ""
+    var rotation = ""
     var shotDistance = ""
     var hang = ""
     var driverPerformance = 0 // 0 = meh, 1 = average, 2 = great

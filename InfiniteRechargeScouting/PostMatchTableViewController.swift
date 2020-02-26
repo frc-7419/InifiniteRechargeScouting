@@ -18,7 +18,9 @@ class PostMatchTableViewController: UITableViewController {
 
         let multipleOptionCell = self.tableView.dequeueReusableCell(withIdentifier: FUISegmentedControlFormCell.reuseIdentifier, for: indexPath) as! FUISegmentedControlFormCell
 
-        let colorWheelOptions = ["No Attempt", "Rotation", "Color", "Failed"]
+        let rotationOptions = ["No Attempt", "Success", "Failure"]
+        
+        let colorOptions = ["No Attempt", "Success", "Failure"]
         
         let shotDistanceOptions = ["Near", "Far", "Both"]
         
@@ -42,25 +44,38 @@ class PostMatchTableViewController: UITableViewController {
             }
             return switchFormCell
         case 2:
-            multipleOptionCell.valueOptions = colorWheelOptions
-            multipleOptionCell.keyName = "Color Wheel"
+            multipleOptionCell.valueOptions = rotationOptions
+            multipleOptionCell.keyName = "Rotation"
             multipleOptionCell.isEditable = true
             multipleOptionCell.onChangeHandler = { newValue in
                 if (newValue == 0) {
-                    self.gameData.colorWheel = "No Attempt"
+                    self.gameData.rotation = "No Attempt"
                 }
                 else if (newValue == 1) {
-                    self.gameData.colorWheel = "Rotation"
-                }
-                else if (newValue == 2) {
-                    self.gameData.colorWheel = "Color"
+                    self.gameData.rotation = "Success"
                 }
                 else {
-                    self.gameData.colorWheel = "Failed"
+                    self.gameData.rotation = "Failure"
                 }
             }
             return multipleOptionCell
         case 3:
+            multipleOptionCell.valueOptions = colorOptions
+            multipleOptionCell.keyName = "Color Selection"
+            multipleOptionCell.isEditable = true
+            multipleOptionCell.onChangeHandler = { newValue in
+                if (newValue == 0) {
+                    self.gameData.colorSelection = "No Attempt"
+                }
+                else if (newValue == 1) {
+                    self.gameData.colorSelection = "Success"
+                }
+                else {
+                    self.gameData.colorSelection = "Failure"
+                }
+            }
+            return multipleOptionCell
+        case 4:
             multipleOptionCell.valueOptions = shotDistanceOptions
             multipleOptionCell.keyName = "Shot Distance"
             multipleOptionCell.isEditable = true
@@ -76,7 +91,7 @@ class PostMatchTableViewController: UITableViewController {
                 }
             }
             return multipleOptionCell
-        case 4:
+        case 5:
            multipleOptionCell.valueOptions = hangOptions
            multipleOptionCell.keyName = "Hang"
            multipleOptionCell.isEditable = true
@@ -91,22 +106,22 @@ class PostMatchTableViewController: UITableViewController {
                    self.gameData.hang = "Balanced"
                }
                else if (newValue == 3) {
-                   self.gameData.colorWheel = "Failed"
+                   self.gameData.hang = "Failed"
                }
                else {
-                   self.gameData.colorWheel = "Parked"
+                   self.gameData.hang = "Parked"
                }
                 
             }
             return multipleOptionCell
-        case 5:
+        case 6:
             switchFormCell.keyName = "Under Trench?"
             switchFormCell.value = gameData.trench
             switchFormCell.onChangeHandler = { [unowned self] newValue in
                 self.gameData.trench = newValue
             }
             return switchFormCell
-        case 6:
+        case 7:
             multipleOptionCell.valueOptions = rankOptions
             multipleOptionCell.keyName = "Driver Performance"
             multipleOptionCell.isEditable = true
@@ -122,7 +137,7 @@ class PostMatchTableViewController: UITableViewController {
                 }
             }
             return multipleOptionCell
-        case 7:
+        case 8:
             switchFormCell.keyName = "Penalties?"
             switchFormCell.value = gameData.penalties
             switchFormCell.onChangeHandler = { [unowned self] newValue in
@@ -135,7 +150,7 @@ class PostMatchTableViewController: UITableViewController {
     }
 
      override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 8
+            return 9
         }
 
         /*
