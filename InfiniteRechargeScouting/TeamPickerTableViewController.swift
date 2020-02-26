@@ -28,7 +28,7 @@ class TeamPickerTableViewController: FUIFormTableViewController {
     
     var ROUNDS = 200
     
-    var valueOptions = ["1"]
+    var valueOptions = [String]()
     
     var gameData = ModelObject.shared
     
@@ -92,10 +92,10 @@ class TeamPickerTableViewController: FUIFormTableViewController {
                 valuePickerCell = cell // keep reference for onChangeHandler
                 cell.keyName = "Match Number"
                 cell.valueOptions = valueOptions
-                cell.value = self.gameData.match <= 0 ? 0 : self.gameData.match  // index of first value as default
+                cell.value = self.gameData.match - 1 <= 0 ? 0 : self.gameData.match - 1  // index of first value as default
                 cell.onChangeHandler = { newValue in
                     print("Selected value option: \(self.valueOptions[newValue])")
-                    self.gameData.match = newValue
+                    self.gameData.match = newValue + 1
                 }
                 
                 return cell
@@ -162,7 +162,7 @@ class TeamPickerTableViewController: FUIFormTableViewController {
         let nextButton = UIBarButtonItem(title: "Next", style: .done, target: self, action: #selector(pushNextViewController(sender:)))
         self.navigationItem.rightBarButtonItem = nextButton
         
-        for n in 2...ROUNDS{
+        for n in 1...ROUNDS{
             valueOptions.append(String(n))
         }
         
@@ -173,7 +173,7 @@ class TeamPickerTableViewController: FUIFormTableViewController {
         
         // Team number
         if let matchNo = Int(valueOptions[0]) {
-            self.gameData.match = matchNo
+            self.gameData.match = matchNo - 1
         }
         tableView.register(FUINoteFormCell.self, forCellReuseIdentifier: FUINoteFormCell.reuseIdentifier)
         

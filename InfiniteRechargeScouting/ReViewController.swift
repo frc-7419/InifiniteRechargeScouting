@@ -74,13 +74,16 @@ class ReViewController: FUIFormTableViewController {
         request.httpMethod = "POST"
         request.httpBody = jsonData
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else {
+            guard let data = data, error == nil, let response = response as? HTTPURLResponse else {
                 print(error?.localizedDescription ?? "No data")
+                FUIToastMessage.show(message: "Error!")
                 return
             }
-            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
-            if let responseJSON = responseJSON as? [String: Any] {
-                print(responseJSON)
+            print(response.statusCode);
+            if (response.statusCode == 200){
+                FUIToastMessage.show(message: "Success!")
+            } else {
+                FUIToastMessage.show(message: "Error!")
             }
         }
 
