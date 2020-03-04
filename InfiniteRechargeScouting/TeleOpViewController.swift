@@ -29,7 +29,7 @@ class TeleOpViewController: UIViewController {
         self.title = "TeleOp"
 
         self.navigationItem.hidesBackButton = true
-        let newBackButton = UIBarButtonItem(title: "Sandstorm", style: UIBarButtonItem.Style.done, target: self, action: #selector(back(sender:)))
+        let newBackButton = UIBarButtonItem(title: "Autonomous", style: UIBarButtonItem.Style.done, target: self, action: #selector(back(sender:)))
         self.navigationItem.leftBarButtonItem = newBackButton
 
         let nextButton = UIBarButtonItem(title: "Next", style: .done, target: self, action: #selector(pushNextViewController(sender:)))

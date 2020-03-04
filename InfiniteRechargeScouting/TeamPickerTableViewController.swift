@@ -17,7 +17,7 @@ class TeamPickerTableViewController: FUIFormTableViewController {
     private var teamValues = [0]
     private var scoutValues = [0]
     let teamListOptions = ["1072 – Harker Robotics", "1280 – Ragin' C- Biscuits", "1323 – MadTown Robotics", "1422 – The Neon Knights", "1671 – Buchanan Bird Brains", "1700 – Gatorbotics", "2035 – Robo Rockin' Bots", "2073 – EagleForce", "2085 – RoboDogs", "2135 – Presentation Invasion", "253 – Boba Bots", "254 – The Cheesy Poofs", "2813 – Gear Heads", "2854 – The Prototypes", "3189 – Circuit Breakers", "3303 – Metallic Thunder", "3495 – MindCraft Robotics", "3669 – RoboKnights", "3970 – Duncan Dynamics", "4135 – Iron Patriots", "5026 – Iron Panthers", "5104 – BreakerBots", "5134 – RoboWolves", "5274 – Wolverines", "5419 – Berkelium", "5458 – Digital Minds", "5817 – Uni-Rex", "585 – Cyber Penguins", "5940 – B.R.E.A.D.", "6059 – System Overload Robotics", "6241 – CowTech", "6305 – Stable Circuits", "649 – M-SET Fish", "6506 – Steel Boot", "6619 – GravitechX", "6657 – Arborbotics", "6662 – FalconX", "6711 – Millennial Falcons", "6804 – Team Wolfpack", "6884 – Deep-Space", "6926 – RobotiCats", "6981 – Clockwork Soldiers", "7057 – Titanators", "7419 – QLS Tech Support", "751 – barn2robotics", "7528 – Nuts and Bolts", "7663 – Sleuth Robotics", "8048 – EPA robotics team", "840 – Aragon Robotics Team", "852 – Athenian Robotics", "973 – Greybots"]
-    let scoutListOptions = ["Wesley", "Karan", "Neha"]
+    let scoutListOptions = ["Tanmay", "Kushal", "Daniel", "Ed", "Hari", "Rohan 11", "Shreya", "Kunal", "Samir", "Abtin", "Sid", "Ayush", "Henry", "Wesley", "Karan", "Substitute 1", "Substitute 2", "Substitute 3"]
     var allowsEmptySelection = false
     var isUndoEnabled = false
     var isSearchEnabled = false
@@ -42,10 +42,10 @@ class TeamPickerTableViewController: FUIFormTableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: FUIValuePickerFormCell.reuseIdentifier, for: indexPath) as! FUIValuePickerFormCell
         
         let multipleOptionCell = self.tableView.dequeueReusableCell(withIdentifier: FUISegmentedControlFormCell.reuseIdentifier, for: indexPath) as! FUISegmentedControlFormCell
-        let startingPosition = ["L","M","R"]
+        let startingPosition = ["Far L","L","M","R"]
         let redPos = ["Red1","Red2","Red3"]
         let bluePos = ["Blue1","Blue2","Blue3"]
-        let preloads = ["0","1","2","3"]
+        
         
         switch indexPath.section{
         case 0:
@@ -119,16 +119,6 @@ class TeamPickerTableViewController: FUIFormTableViewController {
                     self.tableView.reloadRows(at: [IndexPath(row: 4, section: 0),IndexPath(row: 5, section: 0)], with: .automatic)
                 }
                 return multipleOptionCell
-            case 6:
-                multipleOptionCell.valueOptions = preloads
-                multipleOptionCell.keyName = "Preloads"
-                multipleOptionCell.value = gameData.initPos
-                multipleOptionCell.isEditable = true
-                multipleOptionCell.onChangeHandler = { newValue in
-                    self.gameData.preload = newValue
-
-                }
-                return multipleOptionCell
             default:
                 print ("error")
             }
@@ -147,7 +137,7 @@ class TeamPickerTableViewController: FUIFormTableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // TODO: Return the number of cells
-        return 7
+        return 6
     }
     
     /*

@@ -64,6 +64,8 @@ class ReViewController: FUIFormTableViewController {
 
     }
     func save(){
+        let indicator = FUIModalProcessingIndicatorView()
+        indicator.show(inView: self.view,animated: true)
         var gameData = ModelObject.shared
         let jsonEncoder = JSONEncoder()
         let jsonData = try! jsonEncoder.encode(self.gameData)
@@ -74,16 +76,20 @@ class ReViewController: FUIFormTableViewController {
         request.httpMethod = "POST"
         request.httpBody = jsonData
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil, let response = response as? HTTPURLResponse else {
-                print(error?.localizedDescription ?? "No data")
-                FUIToastMessage.show(message: "Error!")
-                return
-            }
-            print(response.statusCode);
-            if (response.statusCode == 200){
-                FUIToastMessage.show(message: "Success!")
-            } else {
-                FUIToastMessage.show(message: "Error!")
+            DispatchQueue.main.async{
+                indicator.dismiss(animated: true)
+                
+                guard data != nil, error == nil, let response = response as? HTTPURLResponse else {
+                    print(error?.localizedDescription ?? "No data")
+                    FUIToastMessage.show(message: "Error!")
+                    return
+                }
+                print(response.statusCode);
+                if (response.statusCode == 200){
+                    FUIToastMessage.show(message: "Success!")
+                } else {
+                    FUIToastMessage.show(message: "Error!")
+                }
             }
         }
 

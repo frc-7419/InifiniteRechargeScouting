@@ -18,9 +18,19 @@ class AutonomousTableViewController: UITableViewController {
 
         let multipleOptionCell = self.tableView.dequeueReusableCell(withIdentifier: FUISegmentedControlFormCell.reuseIdentifier, for: indexPath) as! FUISegmentedControlFormCell
         let autonOptions = ["0", "1", "2", "3"]
+        let preloads = ["0","1","2","3"]
 
         switch indexPath.row {
         case 0:
+            multipleOptionCell.valueOptions = preloads
+            multipleOptionCell.keyName = "Preloads"
+            multipleOptionCell.value = gameData.initPos
+            multipleOptionCell.isEditable = true
+            multipleOptionCell.onChangeHandler = { newValue in
+                self.gameData.preload = newValue
+            }
+            return multipleOptionCell
+        case 1:
             //Low Level Auton
             multipleOptionCell.valueOptions = autonOptions
             multipleOptionCell.keyName = "Scored Low"
@@ -29,7 +39,7 @@ class AutonomousTableViewController: UITableViewController {
                 self.gameData.autonLow = newValue
             }
             return multipleOptionCell
-        case 1:
+        case 2:
             multipleOptionCell.valueOptions = autonOptions
             multipleOptionCell.keyName = "Scored High"
             multipleOptionCell.isEditable = true
@@ -38,21 +48,21 @@ class AutonomousTableViewController: UITableViewController {
             }
             return multipleOptionCell
         
-        case 2:
+        case 3:
             switchFormCell.keyName = "Moved Off Init Line?"
             switchFormCell.value = gameData.moved
             switchFormCell.onChangeHandler = { [unowned self] newValue in
                 self.gameData.moved = newValue
             }
             return switchFormCell
-        case 3:
+        case 4:
             switchFormCell.keyName = "Additional Power Cells?"
             switchFormCell.value = gameData.pickup
             switchFormCell.onChangeHandler = { [unowned self] newValue in
                 self.gameData.pickup = newValue
             }
             return switchFormCell
-        case 4:
+        case 5:
                switchFormCell.keyName = "Additional Shots Scored?"
                switchFormCell.value = gameData.additionalPoints
                switchFormCell.onChangeHandler = { [unowned self] newValue in
@@ -65,7 +75,7 @@ class AutonomousTableViewController: UITableViewController {
     }
 
      override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 5
+            return 6
         }
         
         /*
