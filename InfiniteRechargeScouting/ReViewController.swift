@@ -41,37 +41,6 @@ class ReViewController: FUIFormTableViewController {
         self.present(alertController, animated: true, completion: nil)
 
     }
-
-    @objc func showDataWipeAlert() {
-        let alertController = UIAlertController(title: "Confirm", message: "Do you want to delete previous match data", preferredStyle: .alert)
-
-        let action1 = UIAlertAction(title: "Yes", style: .default) { (action:UIAlertAction) in
-//            let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
-//            let url = NSURL(fileURLWithPath: path)
-//            if let pathComponent = url.appendingPathComponent(self.csvFileTitle) {
-//                do {
-//                    try FileManager.default.removeItem(at: pathComponent)
-//                } catch {
-//                    FUIToastMessage.show(message: "Could not delete file!")
-//                }
-//
-//                FUIToastMessage.show(message: "File deleted")
-                self.gameData.reset()
-                self.navigationController?.popToRootViewController(animated: true)
-//            } else {
-//                FUIToastMessage.show(message: "Could not delete file!")
-//            }
-        }
-
-        let action2 = UIAlertAction(title: "No", style: .cancel) { (action:UIAlertAction) in
-            return
-        }
-
-        alertController.addAction(action1)
-        alertController.addAction(action2)
-        self.present(alertController, animated: true, completion: nil)
-
-    }
     func save(){
         let indicator = FUIModalProcessingIndicatorView()
         indicator.show(inView: self.view,animated: true)
