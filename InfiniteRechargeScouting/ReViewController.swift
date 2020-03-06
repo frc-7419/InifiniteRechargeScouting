@@ -12,10 +12,19 @@ import SAPFoundation
 import SAPFiori
 
 class ReViewController: FUIFormTableViewController {
+    var didSave = false
     
     var gameData = ModelObject.shared
     @objc func showResetAlert(sender: UIButton) {
-        let alertController = UIAlertController(title: "Are You Sure?", message: "Going back home will erase any entered data", preferredStyle: .alert)
+        
+        var alertController = UIAlertController(title: "Are You Sure?", message: "Going back home will erase any entered data", preferredStyle: .alert)
+        
+        if (didSave == true) {
+            alertController = UIAlertController(title: "Are You Sure?", message: "Going back home will erase any entered data", preferredStyle: .alert)
+        }
+        else {
+            alertController = UIAlertController(title: "Warning You Haven't Saved Yet", message: "Going back home will erase any entered data", preferredStyle: .alert)
+        }
 
         let action1 = UIAlertAction(title: "Yes", style: .default) { (action:UIAlertAction) in
             //Reset data
@@ -26,7 +35,7 @@ class ReViewController: FUIFormTableViewController {
         let action2 = UIAlertAction(title: "Cancel", style: .cancel) { (action:UIAlertAction) in
             return
         }
-
+        
         alertController.addAction(action1)
         alertController.addAction(action2)
         self.present(alertController, animated: true, completion: nil)
@@ -131,7 +140,7 @@ class ReViewController: FUIFormTableViewController {
         let saveButton = tableView.dequeueReusableCell(withIdentifier: FUIMapDetailPanel.ButtonTableViewCell.reuseIdentifier, for: indexPath) as! FUIMapDetailPanel.ButtonTableViewCell
         let textFieldCell = tableView.dequeueReusableCell(withIdentifier: FUITextFieldFormCell.reuseIdentifier, for: indexPath) as! FUITextFieldFormCell
         let exportButton = tableView.dequeueReusableCell(withIdentifier: FUIMapDetailPanel.ButtonTableViewCell.reuseIdentifier, for: indexPath) as! FUIMapDetailPanel.ButtonTableViewCell
-
+        
 
 
 
@@ -141,7 +150,12 @@ class ReViewController: FUIFormTableViewController {
             case 0:
                 saveButton.button.setTitle("Save", for: .normal)
                 saveButton.button.didSelectHandler = { btn in
-                    self.save()
+                    if (self.didSave) {
+                        FUIToastMessage.show(message: "Already Saved!")
+                    } else {
+                        self.save()
+                    }
+                    self.didSave = true
                 }
                 return saveButton
             default:
