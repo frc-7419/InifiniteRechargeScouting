@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2A5ACCD7224A21C7008109E7 /* ReViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5ACCD6224A21C7008109E7 /* ReViewController.swift */; };
+		A1B1D7F1275853CA005CDDAF /* SAPCommon in Frameworks */ = {isa = PBXBuildFile; productRef = A1B1D7F0275853CA005CDDAF /* SAPCommon */; };
+		A1B1D7F3275853D0005CDDAF /* SAPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = A1B1D7F2275853D0005CDDAF /* SAPFoundation */; };
 		AACB9D8C2217B19100B7E84B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB9D8B2217B19100B7E84B /* AppDelegate.swift */; };
 		AACB9D8E2217B19100B7E84B /* TeamPickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB9D8D2217B19100B7E84B /* TeamPickerTableViewController.swift */; };
 		AACB9D912217B19100B7E84B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACB9D8F2217B19100B7E84B /* Main.storyboard */; };
@@ -16,10 +18,6 @@
 		AACB9D9E2217B29400B7E84B /* AutonomousTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB9D9D2217B29400B7E84B /* AutonomousTableViewController.swift */; };
 		AACB9DA22217B2E000B7E84B /* TotalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB9DA12217B2E000B7E84B /* TotalTableViewController.swift */; };
 		B43C97692235D365001F3AC8 /* ModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C97682235D365001F3AC8 /* ModelObject.swift */; };
-		D3E51885253F87D20087A076 /* SAPCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E5187F253F87C50087A076 /* SAPCommon.xcframework */; };
-		D3E51886253F87D20087A076 /* SAPCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3E5187F253F87C50087A076 /* SAPCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D3E51887253F87D30087A076 /* SAPFiori.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E51881253F87C60087A076 /* SAPFiori.xcframework */; };
-		D3E51888253F87D30087A076 /* SAPFiori.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3E51881253F87C60087A076 /* SAPFiori.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D3E51889253F87D40087A076 /* SAPFoundation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E51880253F87C60087A076 /* SAPFoundation.xcframework */; };
 		D3E5188A253F87D40087A076 /* SAPFoundation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3E51880253F87C60087A076 /* SAPFoundation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6157A832235E028001033E1 /* TeleOpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6157A812235E028001033E1 /* TeleOpViewController.swift */; };
@@ -35,8 +33,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D3E5188A253F87D40087A076 /* SAPFoundation.xcframework in Embed Frameworks */,
-				D3E51888253F87D30087A076 /* SAPFiori.xcframework in Embed Frameworks */,
-				D3E51886253F87D20087A076 /* SAPCommon.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,9 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1B1D7F3275853D0005CDDAF /* SAPFoundation in Frameworks */,
+				A1B1D7F1275853CA005CDDAF /* SAPCommon in Frameworks */,
 				D3E51889253F87D40087A076 /* SAPFoundation.xcframework in Frameworks */,
-				D3E51887253F87D30087A076 /* SAPFiori.xcframework in Frameworks */,
-				D3E51885253F87D20087A076 /* SAPCommon.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +140,10 @@
 			dependencies = (
 			);
 			name = InfiniteRechargeScouting;
+			packageProductDependencies = (
+				A1B1D7F0275853CA005CDDAF /* SAPCommon */,
+				A1B1D7F2275853D0005CDDAF /* SAPFoundation */,
+			);
 			productName = FRCScouting;
 			productReference = AACB9D882217B19100B7E84B /* InfiniteRechargeScouting.app */;
 			productType = "com.apple.product-type.application";
@@ -177,6 +177,9 @@
 				Base,
 			);
 			mainGroup = AACB9D7F2217B19100B7E84B;
+			packageReferences = (
+				A1B1D7EF27585346005CDDAF /* XCRemoteSwiftPackageReference "cloud-sdk-ios" */,
+			);
 			productRefGroup = AACB9D892217B19100B7E84B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -455,6 +458,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A1B1D7EF27585346005CDDAF /* XCRemoteSwiftPackageReference "cloud-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SAP/cloud-sdk-ios";
+			requirement = {
+				kind = exactVersion;
+				version = "6.1.2-xcfrwk";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A1B1D7F0275853CA005CDDAF /* SAPCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1B1D7EF27585346005CDDAF /* XCRemoteSwiftPackageReference "cloud-sdk-ios" */;
+			productName = SAPCommon;
+		};
+		A1B1D7F2275853D0005CDDAF /* SAPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1B1D7EF27585346005CDDAF /* XCRemoteSwiftPackageReference "cloud-sdk-ios" */;
+			productName = SAPFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AACB9D802217B19100B7E84B /* Project object */;
 }
