@@ -9,6 +9,8 @@ SAPOData.framework/
 SAPOfflineOData.framework/
 Frameworks
 
+swiftpm
+.DS_Store
 
 # Xcode
 #
