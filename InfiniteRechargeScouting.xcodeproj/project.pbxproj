@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2A5ACCD7224A21C7008109E7 /* ReViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5ACCD6224A21C7008109E7 /* ReViewController.swift */; };
+		A1B1D7F1275853CA005CDDAF /* SAPCommon in Frameworks */ = {isa = PBXBuildFile; productRef = A1B1D7F0275853CA005CDDAF /* SAPCommon */; };
+		A1B1D7F3275853D0005CDDAF /* SAPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = A1B1D7F2275853D0005CDDAF /* SAPFoundation */; };
+		A1B1D7F82758719C005CDDAF /* SAPFiori.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B1D7F72758719C005CDDAF /* SAPFiori.xcframework */; };
+		A1B1D7F92758719C005CDDAF /* SAPFiori.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A1B1D7F72758719C005CDDAF /* SAPFiori.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AACB9D8C2217B19100B7E84B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB9D8B2217B19100B7E84B /* AppDelegate.swift */; };
 		AACB9D8E2217B19100B7E84B /* TeamPickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB9D8D2217B19100B7E84B /* TeamPickerTableViewController.swift */; };
 		AACB9D912217B19100B7E84B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACB9D8F2217B19100B7E84B /* Main.storyboard */; };
@@ -16,27 +20,19 @@
 		AACB9D9E2217B29400B7E84B /* AutonomousTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB9D9D2217B29400B7E84B /* AutonomousTableViewController.swift */; };
 		AACB9DA22217B2E000B7E84B /* TotalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB9DA12217B2E000B7E84B /* TotalTableViewController.swift */; };
 		B43C97692235D365001F3AC8 /* ModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C97682235D365001F3AC8 /* ModelObject.swift */; };
-		D3E51885253F87D20087A076 /* SAPCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E5187F253F87C50087A076 /* SAPCommon.xcframework */; };
-		D3E51886253F87D20087A076 /* SAPCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3E5187F253F87C50087A076 /* SAPCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D3E51887253F87D30087A076 /* SAPFiori.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E51881253F87C60087A076 /* SAPFiori.xcframework */; };
-		D3E51888253F87D30087A076 /* SAPFiori.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3E51881253F87C60087A076 /* SAPFiori.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D3E51889253F87D40087A076 /* SAPFoundation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E51880253F87C60087A076 /* SAPFoundation.xcframework */; };
-		D3E5188A253F87D40087A076 /* SAPFoundation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3E51880253F87C60087A076 /* SAPFoundation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6157A832235E028001033E1 /* TeleOpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6157A812235E028001033E1 /* TeleOpViewController.swift */; };
 		F6157A842235E028001033E1 /* TeleOp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6157A822235E028001033E1 /* TeleOp.storyboard */; };
 		F6A3D2C523DFC9BA0086C04D /* PostMatchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A3D2C423DFC9BA0086C04D /* PostMatchTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F6A04937223EC4140036B116 /* Embed Frameworks */ = {
+		A1B1D7FA2758719C005CDDAF /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D3E5188A253F87D40087A076 /* SAPFoundation.xcframework in Embed Frameworks */,
-				D3E51888253F87D30087A076 /* SAPFiori.xcframework in Embed Frameworks */,
-				D3E51886253F87D20087A076 /* SAPCommon.xcframework in Embed Frameworks */,
+				A1B1D7F92758719C005CDDAF /* SAPFiori.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		2A5ACCD6224A21C7008109E7 /* ReViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReViewController.swift; sourceTree = "<group>"; };
+		A1B1D7F72758719C005CDDAF /* SAPFiori.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SAPFiori.xcframework; path = Frameworks/SAPFiori.xcframework; sourceTree = "<group>"; };
 		AACB9D882217B19100B7E84B /* InfiniteRechargeScouting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteRechargeScouting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AACB9D8B2217B19100B7E84B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AACB9D8D2217B19100B7E84B /* TeamPickerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPickerTableViewController.swift; sourceTree = "<group>"; };
@@ -56,9 +53,6 @@
 		AACB9DA12217B2E000B7E84B /* TotalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableViewController.swift; sourceTree = "<group>"; };
 		B43C97682235D365001F3AC8 /* ModelObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelObject.swift; sourceTree = "<group>"; };
 		B43C976A2235DCE5001F3AC8 /* InfiniteRechargeScouting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InfiniteRechargeScouting.entitlements; sourceTree = "<group>"; };
-		D3E5187F253F87C50087A076 /* SAPCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SAPCommon.xcframework; sourceTree = "<group>"; };
-		D3E51880253F87C60087A076 /* SAPFoundation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SAPFoundation.xcframework; sourceTree = "<group>"; };
-		D3E51881253F87C60087A076 /* SAPFiori.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SAPFiori.xcframework; sourceTree = "<group>"; };
 		F6157A812235E028001033E1 /* TeleOpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeleOpViewController.swift; sourceTree = "<group>"; };
 		F6157A822235E028001033E1 /* TeleOp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeleOp.storyboard; sourceTree = "<group>"; };
 		F6A3D2C423DFC9BA0086C04D /* PostMatchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMatchTableViewController.swift; sourceTree = "<group>"; };
@@ -69,9 +63,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3E51889253F87D40087A076 /* SAPFoundation.xcframework in Frameworks */,
-				D3E51887253F87D30087A076 /* SAPFiori.xcframework in Frameworks */,
-				D3E51885253F87D20087A076 /* SAPCommon.xcframework in Frameworks */,
+				A1B1D7F82758719C005CDDAF /* SAPFiori.xcframework in Frameworks */,
+				A1B1D7F3275853D0005CDDAF /* SAPFoundation in Frameworks */,
+				A1B1D7F1275853CA005CDDAF /* SAPCommon in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,9 +113,7 @@
 		B4EFC883223EB4D500F3F99E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D3E5187F253F87C50087A076 /* SAPCommon.xcframework */,
-				D3E51881253F87C60087A076 /* SAPFiori.xcframework */,
-				D3E51880253F87C60087A076 /* SAPFoundation.xcframework */,
+				A1B1D7F72758719C005CDDAF /* SAPFiori.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,14 +128,18 @@
 				AACB9D842217B19100B7E84B /* Sources */,
 				AACB9D852217B19100B7E84B /* Frameworks */,
 				AACB9D862217B19100B7E84B /* Resources */,
-				F6A04937223EC4140036B116 /* Embed Frameworks */,
 				A19C9EEB223C69D600F9193C /* Run Script */,
+				A1B1D7FA2758719C005CDDAF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = InfiniteRechargeScouting;
+			packageProductDependencies = (
+				A1B1D7F0275853CA005CDDAF /* SAPCommon */,
+				A1B1D7F2275853D0005CDDAF /* SAPFoundation */,
+			);
 			productName = FRCScouting;
 			productReference = AACB9D882217B19100B7E84B /* InfiniteRechargeScouting.app */;
 			productType = "com.apple.product-type.application";
@@ -177,6 +173,9 @@
 				Base,
 			);
 			mainGroup = AACB9D7F2217B19100B7E84B;
+			packageReferences = (
+				A1B1D7EF27585346005CDDAF /* XCRemoteSwiftPackageReference "cloud-sdk-ios" */,
+			);
 			productRefGroup = AACB9D892217B19100B7E84B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -455,6 +454,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A1B1D7EF27585346005CDDAF /* XCRemoteSwiftPackageReference "cloud-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SAP/cloud-sdk-ios";
+			requirement = {
+				kind = exactVersion;
+				version = "6.1.2-xcfrwk";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A1B1D7F0275853CA005CDDAF /* SAPCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1B1D7EF27585346005CDDAF /* XCRemoteSwiftPackageReference "cloud-sdk-ios" */;
+			productName = SAPCommon;
+		};
+		A1B1D7F2275853D0005CDDAF /* SAPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1B1D7EF27585346005CDDAF /* XCRemoteSwiftPackageReference "cloud-sdk-ios" */;
+			productName = SAPFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AACB9D802217B19100B7E84B /* Project object */;
 }
