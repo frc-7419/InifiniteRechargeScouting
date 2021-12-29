@@ -45,7 +45,7 @@ class PostMatchTableViewController: UITableViewController {
             multipleOptionCell.valueOptions = colorWheelOptions
             multipleOptionCell.keyName = "Color Wheel"
             multipleOptionCell.isEditable = true
-            multipleOptionCell.onChangeHandler = { newValue in
+            multipleOptionCell.onChangeHandler = { [unowned self] newValue in
                 if (newValue == 0) {
                     self.gameData.colorWheel = "No Attempt"
                 }
@@ -64,7 +64,7 @@ class PostMatchTableViewController: UITableViewController {
             multipleOptionCell.valueOptions = shotDistanceOptions
             multipleOptionCell.keyName = "Shot Distance"
             multipleOptionCell.isEditable = true
-            multipleOptionCell.onChangeHandler = { newValue in
+            multipleOptionCell.onChangeHandler = { [unowned self] newValue in
                 if (newValue == 0) {
                     self.gameData.shotDistance = "Near"
                 }
@@ -80,7 +80,7 @@ class PostMatchTableViewController: UITableViewController {
            multipleOptionCell.valueOptions = hangOptions
            multipleOptionCell.keyName = "Hang"
            multipleOptionCell.isEditable = true
-           multipleOptionCell.onChangeHandler = { newValue in
+           multipleOptionCell.onChangeHandler = { [unowned self] newValue in
                if (newValue == 0) {
                    self.gameData.hang = "No"
                }
@@ -110,7 +110,7 @@ class PostMatchTableViewController: UITableViewController {
             multipleOptionCell.valueOptions = rankOptions
             multipleOptionCell.keyName = "Driver Performance"
             multipleOptionCell.isEditable = true
-            multipleOptionCell.onChangeHandler = { newValue in
+            multipleOptionCell.onChangeHandler = { [unowned self] newValue in
                 if (newValue == 0) {
                     self.gameData.driverPerformance = 1
                 }
